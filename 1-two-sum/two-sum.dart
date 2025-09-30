@@ -1,12 +1,12 @@
 class Solution {
-  List<int> twoSum(List<int> n, int t) {
-     Map<int, int> a = {};
-     for (int i = 0; i < n.length; i++) {
-    int b = t - n[i];
-    if (a.containsKey(b)) {
-      return [a[b]!, i];
+  List<int> twoSum(List<int> nums, int target) {
+     Map<int, int> numMap = {};
+     for (int i = 0; i < nums.length; i++) {
+    int complement = target - nums[i];
+    if (numMap.containsKey(complement)) {
+      return [numMap[complement]!, i];
     }
-    a[n[i]] = i;
+    numMap[nums[i]] = i;
   }
    return [];
     
